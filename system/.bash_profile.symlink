@@ -1,0 +1,2 @@
+# todo this needs to be eventually symlink'ed
+source $HOME/.dotfiles/system/alias.sh

@@ -9,3 +9,9 @@ brew bundle
 
 # install all the things
 sh ./node/install.sh
+
+# link zshrc as not actively using it yet
+src="./system/zshrc.symlink"
+dst="$HOME/.$(basename "${src%.*}")"
+[ -e "$dst" -o -L "$dst" ] && mv $dst $dst"-backup"$(date +"%Y%m%d%H%M%S")
+ln -s $src $dst
