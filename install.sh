@@ -3,7 +3,9 @@
 rootDir="$(dirname $0)"
 cd $rootDir
 
-# install all the things
+# brew needs to be first so brew bundle can tun
 sh ./brew/install.sh
-
 brew bundle
+
+# install all the things
+sh ./node/install.sh
