@@ -7,6 +7,11 @@ cd $rootDir
 sh ./brew/install.sh
 brew bundle
 
+
+# finder
+ defaults write com.apple.Finder AppleShowAllFiles true
+
+
 # install all the things
 sh ./node/install.sh
 
