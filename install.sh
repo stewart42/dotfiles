@@ -3,7 +3,7 @@
 rootDir="$(dirname $0)"
 cd $rootDir
 
-# brew needs to be first so brew bundle can tun
+# brew needs to be first so brew bundle can run
 sh ./brew/install.sh
 brew bundle
 

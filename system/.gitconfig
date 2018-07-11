@@ -115,26 +115,33 @@
 	name = Stewart Scott
 	email = stewart42@gmail.com
 [core]
-	excludesfile = /Users/stewarts/.gitignore_global
-	editor = atom --wait
+	excludesfile = /Users/stewart/.gitignore_global
+	editor = code --wait
 [difftool "sourcetree"]
-	cmd = /usr/local/bin/bcomp $LOCAL $REMOTE
-	path = 
+	cmd = /usr/local/bin/bcomp \"$LOCAL\" \"$REMOTE\"
+	path = -ro
 [mergetool "sourcetree"]
-	cmd = /usr/local/bin/bcomp $LOCAL $REMOTE $BASE $MERGED
+	cmd = /usr/local/bin/bcomp \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
 	trustExitCode = true
 [diff]
-	tool = bc3
-[difftool]
-	bc3 = trustExitCode
-	prompt = false
+    tool = default-difftool
+[difftool "default-difftool"]
+    cmd = code --new --wait --diff $LOCAL $REMOTE
 [merge]
-	tool = bc3
-[mergetool]
-	bc3 = trustExitCode
+    tool = vscode
+[mergetool "vscode"]
+    cmd = code --wait $MERGED
 [push]
 	default = upstream
 [credential]
 	helper = osxkeychain
+# [commit]
+#	template = /Users/stewarts/.stCommitMsg
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
 [commit]
-	template = /Users/stewarts/.stCommitMsg
+	template = /Users/stewart/.stCommitMsg
