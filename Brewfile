@@ -10,6 +10,8 @@ brew 'git-flow'
 brew 'python3'
 brew 'watchman'
 
+brew docker
+
 # pip3 install awscli
 
 cask 'firefox'
@@ -17,3 +19,5 @@ cask 'google-chrome'
 cask 'slack'
 cask 'vlc'
 cask 'skype'
+cask 'visual-studio-code'
+cask 'sourcetree'
