@@ -118,19 +118,21 @@
 	excludesfile = /Users/stewart/.gitignore_global
 	editor = code --wait
 [difftool "sourcetree"]
-	cmd = /usr/local/bin/bcomp \"$LOCAL\" \"$REMOTE\"
-	path = -ro
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
 [mergetool "sourcetree"]
-	cmd = /usr/local/bin/bcomp \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [diff]
-    tool = default-difftool
-[difftool "default-difftool"]
-    cmd = code --new --wait --diff $LOCAL $REMOTE
+    tool = vscode
+[difftool "vscode"]
+	cmd = code --new --wait --diff $LOCAL $REMOTE
+[difftool]
+	prompt = false
 [merge]
     tool = vscode
 [mergetool "vscode"]
-    cmd = code --wait $MERGED
+	cmd = code --new --wait $MERGED
 [push]
 	default = upstream
 [credential]
