@@ -16,9 +16,9 @@ source $HOME/.dotfiles/system/alias.sh
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
-
 setopt APPEND_HISTORY # adds history
-setopt INC_APPEND_HISTORY SHARE_HISTORY  # adds history incrementally and share it across sessions
+setopt INC_APPEND_HISTORY
+setopt SHARE_HISTORY  # adds history incrementally and share it across sessions
 setopt HIST_IGNORE_ALL_DUPS  # don't record dupes in history
 setopt HIST_REDUCE_BLANKS
 
@@ -37,8 +37,9 @@ setopt complete_aliases
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
 # pasting with tabs doesn't perform completion
-zstyle ':completion:*' insert-tab pending
+#zstyle ':completion:*' insert-tab pending
 
+zstyle ':completion:*' menu select
 
 #export PS1="%~> "
 # Load version control information

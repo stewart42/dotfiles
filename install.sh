@@ -20,3 +20,6 @@ src="./system/zshrc.symlink"
 dst="$HOME/.$(basename "${src%.*}")"
 [ -e "$dst" -o -L "$dst" ] && mv $dst $dst"-backup"$(date +"%Y%m%d%H%M%S")
 ln -s $src $dst
+
+# set shell to default to zsh
+chsh -s /bin/zsh
