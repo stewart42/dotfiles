@@ -7,6 +7,8 @@ brew 'node'
 brew 'yarn'
 brew 'watchman'
 
+brew 'deno'
+
 brew 'git'
 brew 'git-flow'
 brew 'git-lfs'
@@ -14,7 +16,7 @@ brew 'git-lfs'
 brew 'python3'
 brew 'go'
 
-brew docker
+brew 'docker'
 
 # pip3 install awscli
 
