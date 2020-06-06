@@ -50,4 +50,4 @@ precmd() { vcs_info }
 zstyle ':vcs_info:git:*' formats '  [%b]'
 
 # Set up the prompt (with git branch name) use http://nerdfonts.com/#cheat-sheet to get -> echo '\ue0a0'
-PROMPT='%{$fg[green]%}${PWD/#$HOME/~}%{$fg[blue]%}${vcs_info_msg_0_} %{$fg[white]%} %{$reset_color%}'
+PROMPT='%{$fg[yellow]%}${PWD/#$HOME/~}%{$fg[blue]%}${vcs_info_msg_0_} %{$fg[white]%} %{$reset_color%}'
