@@ -1,13 +1,13 @@
 cask_args appdir: '/Applications'
 
 brew 'jq'
-brew 'tldr'
+#brew 'tldr'
 brew 'wget'
 brew 'node'
 brew 'yarn'
-brew 'watchman'
+#brew 'watchman'
 
-brew 'deno'
+#brew 'deno'
 
 brew 'git'
 brew 'git-flow'
@@ -38,7 +38,6 @@ cask 'ngrok'
 #cask 'loom'
 
 cask 'zoomus'
-#cask 'skype'
 
 cask 'dropbox'
 cask 'lastpass'
@@ -47,4 +46,4 @@ cask 'ipvanish-vpn'
 cask 'vlc'
 cask 'spotify'
 cask 'alfred'
-cask 'spectacle'
+cask 'rectangle'

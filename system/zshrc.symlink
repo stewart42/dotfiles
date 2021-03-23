@@ -1,10 +1,11 @@
-export ANDROID_HOME=~/Library/Android/sdk
+export PATH="/opt/homebrew/bin:${PATH}"
 
-export PATH="$PATH:$(yarn global bin)"
 export PATH="$HOME/.rbenv/shims:$PATH"
 export PATH="/usr/local/opt/openssl/bin/:$PATH"
-export PATH="$PATH:$HOME/Library/Android/sdk/platform-tools" # Add for adb
 export PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
+
+export PATH="$PATH:$HOME/Library/Android/sdk/platform-tools" # Add for adb
+export ANDROID_HOME=~/Library/Android/sdk
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
