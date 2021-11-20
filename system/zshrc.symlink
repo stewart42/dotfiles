@@ -7,27 +7,28 @@ export PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
 export PATH="$PATH:$HOME/Library/Android/sdk/platform-tools" # Add for adb
 export ANDROID_HOME=~/Library/Android/sdk
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
+ export NVM_DIR="$HOME/.nvm"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 source $HOME/.dotfiles/system/alias.sh
 
-HISTFILE=~/.zsh_history
-HISTSIZE=10000
-SAVEHIST=10000
-setopt APPEND_HISTORY # adds history
-setopt INC_APPEND_HISTORY
-setopt SHARE_HISTORY  # adds history incrementally and share it across sessions
-setopt HIST_IGNORE_ALL_DUPS  # don't record dupes in history
-setopt HIST_REDUCE_BLANKS
+eval "$(starship init zsh)"
 
-autoload -U colors && colors
+# HISTFILE=~/.zsh_history
+# HISTSIZE=10000
+# SAVEHIST=10000
+# setopt APPEND_HISTORY # adds history
+# setopt INC_APPEND_HISTORY
+# setopt SHARE_HISTORY  # adds history incrementally and share it across sessions
+# setopt HIST_IGNORE_ALL_DUPS  # don't record dupes in history
+# setopt HIST_REDUCE_BLANKS
+
+# autoload -U colors && colors
 
 autoload -U compinit
 compinit
-
+ 
 setopt PROMPT_SUBST
 setopt CORRECT
 setopt COMPLETE_IN_WORD
@@ -38,17 +39,17 @@ setopt complete_aliases
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
 # pasting with tabs doesn't perform completion
-#zstyle ':completion:*' insert-tab pending
+zstyle ':completion:*' insert-tab pending
 
 zstyle ':completion:*' menu select
 
-#export PS1="%~> "
-# Load version control information
-autoload -Uz vcs_info
-precmd() { vcs_info }
+# #export PS1="%~> "
+# # Load version control information
+# autoload -Uz vcs_info
+# precmd() { vcs_info }
 
-# Format the vcs_info_msg_0_ variable
-zstyle ':vcs_info:git:*' formats '  [%b]'
+# # Format the vcs_info_msg_0_ variable
+# zstyle ':vcs_info:git:*' formats '  [%b]'
 
-# Set up the prompt (with git branch name) use http://nerdfonts.com/#cheat-sheet to get -> echo '\ue0a0'
-PROMPT='%{$fg[yellow]%}${PWD/#$HOME/~}%{$fg[blue]%}${vcs_info_msg_0_} %{$fg[white]%} %{$reset_color%}'
+# # Set up the prompt (with git branch name) use http://nerdfonts.com/#cheat-sheet to get -> echo '\ue0a0'
+# PROMPT='%{$fg[yellow]%}${PWD/#$HOME/~}%{$fg[blue]%}${vcs_info_msg_0_} %{$fg[white]%} %{$reset_color%}'

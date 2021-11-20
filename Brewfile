@@ -1,5 +1,6 @@
 cask_args appdir: '/Applications'
 
+brew 'starship'
 brew 'jq'
 #brew 'tldr'
 brew 'wget'
@@ -10,7 +11,6 @@ brew 'yarn'
 #brew 'deno'
 
 brew 'git'
-brew 'git-flow'
 brew 'git-lfs'
 
 brew 'python3'
@@ -40,7 +40,7 @@ cask 'ngrok'
 cask 'zoomus'
 
 cask 'dropbox'
-cask 'lastpass'
+cask 'bitwarden'
 cask 'adobe-acrobat-reader'
 cask 'ipvanish-vpn'
 cask 'vlc'
